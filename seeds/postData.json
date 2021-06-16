@@ -1,0 +1,24 @@
+[
+    {
+      "title": "Article 1: WEWEWE",
+      "date_created": "June 6th, 2021",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "user_id": "User1"
+    },
+
+    {
+        "title": "Article 2: WEWEWE",
+        "date_created": "",
+        "content": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "user_id": "User2"
+      },
+
+      {
+        "title": "Article 3: WEWEWE",
+        "date_created": "",
+        "content": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "user_id": "User3"
+      }
+        
+    
+  ]

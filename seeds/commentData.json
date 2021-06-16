@@ -1,0 +1,17 @@
+[
+    {
+        "comment_text": "Commet1",
+        "user_id": "sal@hotmail.com",
+        "post_id": "post1"
+    },
+    {
+        "comment_text": "Commet2",
+        "user_id": "sal@hotmail.com",
+        "post_id": "post2"
+      },
+      {
+        "comment_text": "Commet3",
+        "user_id": "sal@hotmail.com",
+        "post_id": "post3"
+      }
+  ]
