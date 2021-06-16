@@ -7,20 +7,15 @@ Comment.init({
         primaryKey: true,
         autoIncrement: true
     },
-    comment_text: {
-        type: DataTypes.STRING,
-        validate: {
-
-            len: [3]
-        }
-    },
-    user_id: {
-        type: DataTypes.INTEGER,
+    date_created: {
+        type: DataTypes.DATE,
         allowNull: false,
-        references: {
-            model: 'user',
-            key: 'id'
-        }
+        defaultValue: DataTypes.NOW,
+      },
+    content: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        
     },
     post_id: {
         type: DataTypes.INTEGER,
@@ -29,7 +24,14 @@ Comment.init({
             model: 'post',
             key: 'id'
         }
+    },
+
+    body: {
+        type: DataTypes.STRING,
+        allowNull: false,
     }
+
+
 }, {
     sequelize,
     freezeTableName: true,

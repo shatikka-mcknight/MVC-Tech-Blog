@@ -1,0 +1,9 @@
+<form id="edit-post-form">
+    <input type="text" name="post-title" value="{{post.title}}"/>
+    <p>Created by {{post.user.name}}</p>
+    <input type="hidden" name="post-id" value="{{post.id}}"/>
+    <textarea name="post-body">{{post.body}}</textarea>
+    <button type="submit" id="edit-post-form">Update Post</button>
+    <button type="button" id="delete-btn">Delete</button>
+</form>
+<script src="/js/edit/js"></script>
