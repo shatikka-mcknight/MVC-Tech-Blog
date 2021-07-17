@@ -6,18 +6,17 @@ router.get('/', withAuth, async (req, res) => {
   try {
     // store the results of the db query in a variable called postData. should use something that "finds all" from the Post model. may need a where clause!
     const postData = await Post.findAll({
-      include: [
+      where: 
         {
-         user_Id: req.session.user_Id
-        },
-      ],
+         userId: req.session.userId
+        }
     });
 
     // this sanitizes the data we just got from the db above (you have to create the above)
     const posts = postData.map((post) => post.get({ plain: true }));
 
     // fill in the view to be rendered
-    res.render('all-post-admins', {
+    res.render('all-posts-admin', {
       // this is how we specify a different layout other than main! no change needed
       layout: 'dashboard',
       // coming from line 10 above, no change needed

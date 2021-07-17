@@ -1,11 +1,14 @@
- <div class="posts list-group">
+<div class="posts list-group">
       {{#each posts}}
-      <a class="list-name flex-row justify-space-between" href="/dashboard/edit/{{id}}">
+     <article>
       <div class="">
-        <h3>{{title}}</h3>
-        <span>{{format_date createdAt}}</span>
-        <p>{{content}}</p>
+        <h2> <a class="list-name flex-row justify-space-between" href="/post/{{id}}">{{title}}</a></h2>
+       
+        <p> Created by {{User.name}} on{{format_date createdAt}}</span></p>
       </div>
-      </a>
+      {{body}}
+      </article>
       {{/each}}
   </div>
+
+  {{!-- <script src="/js/comment.js"></script> --}}

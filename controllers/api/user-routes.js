@@ -27,7 +27,7 @@ router.post('/login', async (req, res) => {
         username: req.body.username,
       },
     });
-
+ //if user does not exist return the message with a 404 code
     if (!user) {
       res.status(400).json({ message: 'No user account found!' });
       return;
@@ -35,17 +35,18 @@ router.post('/login', async (req, res) => {
 
     const validPassword = user.checkPassword(req.body.password);
 
+//if user password does not exist return the message with a 404 code
     if (!validPassword) {
       res.status(400).json({ message: 'No user account found!' });
       return;
     }
-
+//save the user with a ID and save the username and give access to  log into App
     req.session.save(() => {
       req.session.userId = user.id;
       req.session.username = user.username;
       req.session.loggedIn = true;
 
-      res.json({ user, message: 'You are now logged in!' });
+      res.status(200).json({ user, message: 'You are now logged in!' });
     });
   } catch (err) {
     res.status(400).json({ message: 'No user account found!' });

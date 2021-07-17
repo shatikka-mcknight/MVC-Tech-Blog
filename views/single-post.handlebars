@@ -1,0 +1,21 @@
+<div>
+  <h2>{{post.title}}</h2>
+    <p>by: {{post.user.username}}</p>
+    <p>{{post.body}}</p>
+</div>
+<div>
+  {{#each post.comments as |comment|}}
+    <p>{{comment.body}}</p>
+    <p>{{comment.user.username}}</p>
+  {{/each}}
+</div>
+<div>
+  <form>
+    <textarea name="post-body">{{post.body}}</textarea>
+    <div class="form-group">
+      <button class="btn btn-primary" type="submit">Submit</button>
+    </div>
+  </form>
+</div>
+
+<script src="/js/comment.js"></script>
